@@ -1,0 +1,179 @@
+.main-header {
+  @include base-font;
+  @include font-size-18;
+
+  grid-template-columns: 2fr 1.37fr 2fr repeat(3, 1fr) minmax(0, 5.11fr);
+  grid-gap: $gutter;
+  align-items: center;
+  min-height: $header_height;
+  width: 100%;
+  background: $background;
+
+  div {
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: $grey;
+    }
+  }
+
+  .logo-header {
+    @include font-size-32;
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 44px;
+    letter-spacing: 0.31em;
+  }
+
+  .catalog-header {
+    //flex-component
+    gap: 8px;
+
+    &:active {
+      color: $text;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      .modal_catalog {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .modal_catalog {
+      z-index: 2;
+      top: calc($header_height / 2 + 11px);
+      width: 238px;
+      //height: 264px;
+      background-image: url("img/svg/catalog_modal.svg");
+      position: absolute;
+      transform: translateX(-25px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      visibility: hidden;
+      padding: 20px 16px 14px;
+
+      grid-template-rows: repeat(6, 27px);
+      grid-row-gap: 14px;
+
+      .head_modal {
+        @include font-size-15;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px;
+        /* identical to box height */
+        letter-spacing: -0.015em;
+
+        /* navbar page */
+
+        color: $text;
+        border-bottom: 2px solid rgba(0,0,0,0.5);
+        cursor: auto;
+        &:hover{
+          opacity: 1;
+        }
+      }
+
+      .item_modal{
+        @include font-size-13;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+        color: $text;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+
+        grid-template-columns: 1fr 14px 12px;
+        align-items: center;
+        .pointer{
+          margin-top: 2px;
+          height: 14px;
+          background-image: url("img/svg/pointer.svg");
+          background-repeat: no-repeat;
+
+          &:hover{
+            background-image: url("img/svg/pointer_accent.svg");
+          }
+        }
+
+        &:active{
+          opacity: 1;
+
+          .pointer{
+            background-image: url("img/svg/pointer_accent.svg");
+          }
+        }
+      }
+    }
+  }
+
+  .search-header {
+    max-width: 192px;
+    height: 27px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    align-content: center;
+    box-sizing: border-box;
+    color: #7E7E7E;
+
+    grid-template-columns: 15px auto;
+    grid-gap: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+    img {
+      align-self: center;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    input {
+      padding: 3px 0 0;
+      border: 0;
+
+      &::placeholder {
+        @include base-font;
+        @include font-size-15;
+        color: $grey;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .question-header {
+    justify-self: end;
+
+    button {
+      @include base-font;
+      @include font-size-15;
+      width: 145px;
+      height: 40px;
+      color: $accent;
+      border: 1px solid $accent;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:active {
+        color: $grey;
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

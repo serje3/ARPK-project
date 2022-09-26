@@ -1,0 +1,103 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+
+}
+
+/**/
+//
+//
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .main-header {
+    div {
+      @include font-size-15;
+    }
+
+    .logo-header {
+      @include font-size-24;
+    }
+
+    .catalog-header {
+      img {
+        height: 100%;
+        width: calc(13px * 0.78);
+        align-self: center;
+      }
+
+      .modal_catalog{
+        background-image: url("img/svg/catalog_modal_xl.svg");
+        height: 304px;
+      }
+    }
+
+    grid-template-columns: 2fr 1.37fr 15px repeat(3, 1fr) minmax(0, 5.11fr);
+
+    .search-header {
+      border-color: rgba(0, 0, 0, 0);
+      padding: 0;
+
+      input {
+        display: none;
+      }
+
+      img {
+        width: calc(15px * 0.9);
+      }
+
+    }
+    .question-header{
+      button{
+        @include font-size-13;
+        height: calc(40px * 0.78 + 3px);
+        width: calc(145px * 0.78 + 5px);
+      }
+    }
+  }
+
+}
+
+/**/
+//
+//
+///* Small Devices, Tablets */
+//@media only screen and (max-width : 768px)
+///**/
+//
+//
+///* Extra Small Devices, Phones */
+//@media only screen and (max-width : 480px)
+///**/
+//
+//
+///* Custom, iPhone Retina */
+//@media only screen and (max-width : 320px)
+///**/
+//
+//
+///*==========  Mobile First  ==========*/
+//
+///* Custom, iPhone Retina */
+//@media only screen and (min-width : 320px)
+///**/
+//
+//
+///* Extra Small Devices, Phones */
+//@media only screen and (min-width : 480px)
+///**/
+//
+//
+///* Small Devices, Tablets */
+//@media only screen and (min-width : 768px)
+///**/
+//
+//
+///* Medium Devices, Desktops */
+//@media only screen and (min-width : 992px)
+///**/
+//
+//
+///* Large Devices, Wide Screens */
+//@media only screen and (min-width : 1200px)
+///**/

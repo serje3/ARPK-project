@@ -1,0 +1,153 @@
+.home-content{
+  grid-gap: $gutter;
+}
+
+.main-panel-home {
+  min-height: 586px;
+
+  //grid options
+  grid-template-columns: 8.22fr 7.82fr;
+  .info_panel {
+    background: #EAEAEA;
+    border-radius: 5px 0 0 5px;
+    //grid options
+    align-items: center;
+    .block_info_panel{
+      //grid options
+      justify-content: space-between;
+
+      min-height: 307px;
+      max-width: 61%;
+      margin-left: 16.5%;
+      .h1{
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60px;
+        /* or 167% */
+
+        letter-spacing: -0.015em;
+
+        color: $black;
+      }
+
+      .p{
+        //margin-top: 18px;
+        //margin-bottom: 27px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        /* or 133% */
+
+        letter-spacing: -0.015em;
+
+        color: $black;
+      }
+
+      button{
+        font-size: 17px;
+        align-self: end;
+        width: 192px;
+        height: 53px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        /* or 133% */
+
+        letter-spacing: -0.015em;
+
+        color: $background;
+
+        background: $accent;
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .img_panel {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(0);
+    border-radius: 0 14px 14px 0;
+  }
+}
+
+.services-content{
+  min-height: 820px;
+  //width: 83.07%;
+  margin: 0 8.46%;
+  padding: 64px 0;
+  grid-template-rows: auto 1fr;
+
+  .head-48-services{
+    width: 69%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    /* or 150% */
+
+    letter-spacing: -0.015em;
+
+    color: $black;
+  }
+
+  .list-services{
+    min-height: 100%;
+    padding-top: 64px;
+    //height: inherit;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: $gutter;
+    grid-row-gap: 56px;
+
+    .item{
+      display: grid;
+      grid-template-rows: auto 1fr 40px;
+      grid-row-gap: 24px;
+
+      .h1-item{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 36px;
+        /* identical to box height, or 180% */
+
+        letter-spacing: -0.015em;
+
+        color: $black;
+      }
+
+      .p-item{
+        @include font-size-18;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        /* or 144% */
+
+        letter-spacing: -0.015em;
+
+        color: $black;
+        opacity: 0.8;
+      }
+
+      button{
+        @include font-size-15;
+        width: 151px;
+        height: 40px;
+        background: $accent;
+        border-radius: 6px;
+        border: 0;
+
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        color: $background;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@mixin base-font {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+
+  color: $text;
+}
+
+@mixin font-size-13{
+  font-size: 13px;
+}
+
+@mixin font-size-15 {
+  font-size: 15px;
+}
+
+@mixin font-size-18 {
+  font-size: 18px;
+}
+
+@mixin font-size-24 {
+  font-size: 24px;
+}
+
+@mixin font-size-32 {
+  font-size: 32px;
+}
+
+@mixin font-size-36 {
+  font-size: 36px;
+}
