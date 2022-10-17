@@ -27,6 +27,13 @@ class ProductList(generics.ListAPIView):
     filterset_fields = ['subcategory', ]
 
 
+class ProductRetrieve(generics.RetrieveAPIView):
+    queryset = Product.objects.filter(display=True)
+    serializer_class = ProductSerializer
+    lookup_field = 'id'
+    lookup_url_kwarg = 'id'
+
+
 class OrderCreate(generics.CreateAPIView):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
