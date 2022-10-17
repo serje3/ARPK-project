@@ -1,0 +1,272 @@
+.main-header {
+  .catalog-header {
+    .modal_catalog {
+      z-index: 101;
+      top: calc($header_height / 2 + 11px);
+      width: 238px;
+      //height: 264px;
+      background-image: url("../img/svg/catalog_modal.svg");
+      position: absolute;
+      transform: translateX(-25px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      visibility: hidden;
+      padding: 20px 16px 14px;
+
+      grid-template-rows: repeat(6, 27px);
+      grid-row-gap: 14px;
+
+      .head_modal {
+        @include font-size-15;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px;
+        /* identical to box height */
+        letter-spacing: -0.015em;
+
+        /* navbar page */
+
+        color: $text;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        cursor: auto;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .search_modal {
+        display: none;
+        height: 27px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        grid-template-columns: 1fr 16px 12px;
+        align-content: center;
+
+        input {
+          @include font-size-13;
+
+          padding: 3px 0 0;
+          border: 0;
+
+          &::placeholder {
+            @include base-font;
+            @include font-size-13;
+            color: $grey;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        img {
+          margin-left: 2px;
+          width: 15px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+
+          &:active {
+            opacity: 1;
+          }
+        }
+      }
+
+      .item_modal {
+        @include font-size-13;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+        color: $text;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+
+        grid-template-columns: 1fr 14px 12px;
+        align-items: center;
+        cursor: pointer;
+
+
+        .pointer {
+          margin-top: 2px;
+          height: 14px;
+          background-image: url("../img/svg/pointer.svg");
+          background-repeat: no-repeat;
+
+          &:hover {
+            background-image: url("../img/svg/pointer_accent.svg");
+          }
+        }
+
+        &:active {
+          opacity: 1;
+          color: $grey;
+
+
+          .pointer {
+            background-image: url("../img/svg/pointer_accent.svg");
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+
+      }
+    }
+
+    #overlay {
+      $gutter: 25px;
+      overflow-y: scroll;
+      &:hover {
+        opacity: 1;
+      }
+
+      .header_overlay {
+        padding: 0 $gutter;
+        height: 80px;
+        gap: $gutter;
+        border-bottom: 1px solid #C9C9C9;
+
+        div {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          align-self: center;
+          letter-spacing: -0.015em;
+
+          /* grey invis 50% */
+
+          color: #7E7E7E;
+
+        }
+      }
+
+      .navigation_overlay {
+
+        padding: 20px $gutter;
+        grid-gap: 20px;
+
+        .search_overlay {
+          grid-template-columns: 15px 1fr;
+          grid-column-gap: 6px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+          padding: 0 6px;
+          height: 40px;
+
+          img {
+            width: 15px;
+            height: 100%;
+            padding: 3px 0 0;
+            align-self: center;
+          }
+
+          input {
+            @include font-size-15;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 3px 0 0;
+            border: 0;
+
+            &::placeholder {
+              @include base-font;
+              @include font-size-15;
+              color: $grey;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .page_overlay{
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -0.015em;
+
+          color: #000000;
+        }
+
+        .catalog_overlay {
+          .head_catalog_overlay {
+            list-style: none;
+            &::marker{
+              display: none;
+            }
+          }
+
+          .item_catalog_overlay {
+            @include font-size-13;
+            height: 27px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: -0.015em;
+            color: $text;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 1px;
+            padding-left: 9px;
+
+            grid-template-columns: 1fr 18px 18px;
+            align-items: center;
+
+            margin-top: 14px;
+
+            .pointer {
+              margin-top: 2px;
+              height: 14px;
+              width: 18px;
+              background-image: url("../img/svg/pointer-extend.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+
+              &:hover {
+                background-image: url("../img/svg/pointer-extend_accent.svg");
+              }
+            }
+
+            &:active {
+              opacity: 1;
+              color: $grey;
+
+
+              .pointer {
+                background-image: url("../img/svg/pointer-extend_accent.svg");
+              }
+            }
+          }
+        }
+        .home_overlay, .contacts_overlay, .about_overlay{
+          &:hover {
+            opacity: 0.8;
+          }
+
+          &:active {
+            color: $grey;
+          }
+        }
+        .btn_overlay{
+          @include font-size-15;
+          font-weight: 500;
+          height: 40px;
+          width: 100%;
+          border: 1px solid $accent;
+          border-radius: 6px;
+          color: $accent;
+
+
+
+          &:active{
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+}

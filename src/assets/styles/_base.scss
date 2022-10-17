@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  @include base-font;
+}
+
+body {
+  @include base-font;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex{
+  display: flex;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1360px;
+  min-width: 270px;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  min-height: 100vh;
+
+  //grid options
+  grid-template-rows: $header_height 1fr $footer_height;
+  grid-row-gap: $gutter;
+}
+
+button{
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 1;
+  }
+}
+
+.h1{
+  @include font-size-36;
+}
+
+.h2{
+  @include font-size-32;
+}
+
+.h3{
+  @include font-size-24;
+}
+
+.h4{
+  @include font-size-18;
+}
+
+.p{
+  @include font-size-15;
+}
+
+.span{
+  @include font-size-13;
+}
+
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $darkgrey ; /* Black background with opacity */
+  z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+  display: none
+}
+/* Убираем стандартный маркер Firefox */
+details > summary {
+  list-style: none;
+}
