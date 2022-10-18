@@ -53,8 +53,8 @@ class Order(models.Model):
 
     product = models.ForeignKey(Product, on_delete=models.RESTRICT, null=True, verbose_name="Товар")
     name_client = models.CharField(max_length=20, default="Безымянный", verbose_name="Имя клиента")
-    phone_number = PhoneNumberField(verbose_name='Номер телефона')
-    email = models.EmailField(null=True)
+    phone_number = PhoneNumberField(verbose_name='Номер телефона', null=False)
+    email = models.EmailField(null=False)
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
 
     @admin.display(description='Цена')
