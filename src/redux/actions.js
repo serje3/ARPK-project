@@ -1,6 +1,6 @@
 import {
     INIT_RESET_SUBCATEGORIES,
-    REQUEST_CATEGORIES, REQUEST_ONE_PRODUCT,
+    REQUEST_CATEGORIES, REQUEST_CREATE_ORDER, REQUEST_ONE_PRODUCT,
     REQUEST_PRODUCTS,
     REQUEST_SUBCATEGORIES,
 } from "./types";
@@ -35,5 +35,12 @@ export function fetchSubcategories(categoryId) {
 export function resetSubcategories() {
     return {
         type: INIT_RESET_SUBCATEGORIES
+    }
+}
+
+export function createOrder(form) {
+    return {
+        type: REQUEST_CREATE_ORDER,
+        payload: form
     }
 }

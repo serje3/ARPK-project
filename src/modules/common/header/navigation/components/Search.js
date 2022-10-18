@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const handleInputSearch = (event, list, navigate) => {
     event.preventDefault()
+    //eslint-disable-next-line
     const re = RegExp("(\S+\s){0,3}\S*("+event.target[0].value+")\S*(\s\S+){0,3}", "gi")
     const new_list = list.filter(value => re.test(value.name))
     if (new_list.length !== 0)

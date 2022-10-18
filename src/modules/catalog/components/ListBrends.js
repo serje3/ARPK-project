@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { PageLink } from "../../common";
 import { useLocation } from "react-router-dom";
 import { useQuery } from "../../../hooks/useQuery";
-import { useSelector } from "react-redux";
 
 
 function setActiveBrend(index, brends) {
@@ -22,8 +21,9 @@ export const ListBrends = ({ subcategories }) => {
         const subcategoryId = parseInt(query.get("subcategory-id"))
         if (!isNaN(subcategoryId))
             setActiveBrend(subcategories.findIndex(value => value.id === subcategoryId), brendRef)
+        //eslint-disable-next-line
     }, [query])
-    
+
     if (subcategories.length === 0) {
         return null
     }

@@ -86,3 +86,22 @@
     }
   }
 }
+
+.success_page{
+  margin: 0 8%;
+  flex-direction: column;
+  gap: $gutter;
+  .head_success{
+    @include font-size-24
+  }
+
+  button{
+    @include font-size-18;
+    width: fit-content;
+    color: $accent;
+    background: $background;
+    border: 1px solid $accent;
+    border-radius: 3px;
+    height: 45px;
+  }
+}

@@ -41,6 +41,14 @@ class NavigationProducts extends React.Component {
         }
     }
 
+    findCategoryName = () => {
+        console.log(this.props.categories)
+        const category = this.props.categories.find((value) => value.id === this.state.category)
+        if (category === undefined)
+            return "Ошибка"
+        return category.name
+    }
+
     render() {
         return (
             <div className="navigation_catalog">
@@ -48,7 +56,7 @@ class NavigationProducts extends React.Component {
                     this.state.category === 0 || !this.props.query.get('category-id') || this.props.categories.length === 0 ?
                         "Каталог"
                         :
-                        this.props.categories.find((value) => value.id === this.state.category).name
+                        this.findCategoryName()
                 }</div>
                 <ListCategories
                     categories={this.props.categories}

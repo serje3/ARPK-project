@@ -270,3 +270,195 @@
     }
   }
 }
+
+
+.header_buymodal{
+  height: 68px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  .text_header{
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+    letter-spacing: -0.055em;
+
+    color: #000000;
+  }
+}
+.content_buymodal{
+  margin: 30px;
+
+  .product{
+    .head_product{
+      font-family: 'Montserrat', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      letter-spacing: -0.055em;
+
+      /* navbar page */
+
+      color: #152536;
+
+    }
+    .item_product{
+      position: relative;
+      margin-top: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      grid-template-columns: max(81px) 1fr 2fr;
+      grid-column-gap: 30px;
+      grid-template-rows: 1fr 1fr;
+      justify-content: start;
+      .photo_item{
+        grid-row: 1 / -1;
+        background-size: cover;
+        background-position: center;
+
+      }
+      .title_item{
+        grid-column: 2 / 4;
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.055em;
+
+        /* navbar page */
+
+        color: #152536;
+      }
+      .coast_item{
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.055em;
+        white-space: nowrap;
+        color: rgba(21, 37, 54, 0.5);
+      }
+      .counter_item{
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.055em;
+        white-space: nowrap;
+        color: rgba(21, 37, 54, 0.5);
+      }
+    }
+  }
+
+  form{
+    margin-top: 18px;
+    .head_form{
+      font-family: 'Montserrat', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      letter-spacing: -0.055em;
+
+      /* navbar page */
+
+      color: $text;
+    }
+    .head_description_form{
+      font-family: 'Montserrat', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.055em;
+
+      /* grey invis 50% */
+
+      color: $grey;
+      max-width: 414px;
+    }
+
+    .inputs_form{
+      margin-top: 18px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 13px;
+      grid-column-gap: 30px;
+
+      .item_input{
+        .head_item{
+          font-family: 'Montserrat', serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          /* identical to box height */
+
+          letter-spacing: -0.055em;
+
+          /* navbar page */
+
+          color: #152536;
+
+        }
+        input{
+          outline: none;
+          height: 24px;
+          margin-top: 10px;
+          padding: 0 8px;
+          width: 100%;
+          border: 0;
+          border-radius: 3px;
+          font-family: 'Montserrat', serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+
+          color: $text;
+        }
+        input::placeholder{
+          color: $grey;
+        }
+      }
+      .btn_submit{
+        align-self: end;
+        button{
+          background: #18A0FB;
+          border-radius: 6px;
+          border: 0;
+          height: 24px;
+          width: 100%;
+          font-family: 'Montserrat', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          letter-spacing: -0.015em;
+
+          color: #FFFFFF;
+
+        }
+      }
+    }
+    .error{
+      margin-top: 10px;
+      font-size: 14px;
+      .item_error{
+        color: red;
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@ import { PageLink } from "./PageLink";
 
 export const Breadcrumb = ({ usePageManager = () => [] }) => {
     const path = usePageManager()
-
     return (
         <div className="breadcrumb flex">
             {path.map((value, index) => (

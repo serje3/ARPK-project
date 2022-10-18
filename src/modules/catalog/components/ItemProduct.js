@@ -1,9 +1,11 @@
 import ellipseImg from "assets/img/svg/ellipse.svg";
 import { PageLink } from "../../common";
+import { useNavigate } from "react-router-dom";
 
 
 export const ItemProduct = (props) => {
     const photoStyle = { backgroundImage: "url(" + props.photo + ")" }
+    const navigate = useNavigate()
     return (
         <div className="item_products grid">
             <div className="photo_item" style={photoStyle}/>
@@ -18,7 +20,7 @@ export const ItemProduct = (props) => {
                 </div>
                 <div className="coast_info">Цена: <span>{props.coast} ₽</span></div>
                 <div className="counter_info">Количество <span>- 1 +</span></div>
-                <button className="buy_info">Купить</button>
+                <button className="buy_info" onClick={()=>navigate("/product/"+props.id+"?order=true")}>Купить</button>
             </div>
         </div>
     )

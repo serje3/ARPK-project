@@ -5,6 +5,7 @@ import Catalog from "./modules/catalog/Catalog";
 import { About } from "./modules/about/About";
 import { Contacts } from "./modules/contacts/Contacts";
 import { Product } from "./modules/product/Product";
+import { OrderSuccess } from "./modules/product/OrderSuccess";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <div className="wrapper grid">
                 <Header/>
                 <Routes>
+                    <Route path="/order/success" element={<OrderSuccess/>}/>
                     <Route path="/product/:id" element={<Product/>}/>
                     <Route path="/catalog" element={<Catalog/>}/>
                     <Route path="/about" element={<About/>}/>
