@@ -3,8 +3,7 @@
 
 ### Description
 
->This is my own portfolio project. Online auto parts store written in ReactJS & Django Rest Framework. Made to order
-
+>Online auto parts store written in ReactJS & Django Rest Framework. This is my own portfolio project.
 
 ### Technologies
 
