@@ -1,0 +1,33 @@
+.service-page{
+  $gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: $gap;
+
+  .service-coast{
+    width: fit-content;
+    min-height: 40px;
+    border: 2px solid $lightgrey;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 10px;
+    align-items: center;
+
+    strong{
+      white-space: nowrap;
+      font-weight: bold;
+    }
+  }
+  .service-information{
+    flex-direction: column;
+    gap: $gap;
+    position: relative;
+    details{
+
+      summary{
+        padding: 0 10px;
+      }
+    }
+  }
+}

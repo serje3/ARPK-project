@@ -168,7 +168,8 @@
         grid-column-gap: 15px;
         justify-content: space-between;
         align-content: space-between;
-        div{
+        .flex{
+          position: relative;
           height: 29px;
           font-style: normal;
           font-weight: 500;
@@ -182,6 +183,8 @@
           padding-left: 3px;
           padding-right: 8px;
           justify-content: space-between;
+          cursor: pointer;
+          user-select: none;
         }
       }
     }
@@ -190,138 +193,139 @@
       grid-column: 1 / 3;
       align-content: start;
       grid-row-gap: $gutter;
-      .item_products{
-        grid-template-columns: repeat(4,1fr);
-        grid-column-gap: $gutter;
-        align-items: center;
-        .photo_item{
-          //photo
-          min-width: 137px;
-          height: 108px;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          border-radius: 3px;
-        }
-
-        .description_item{
-          height: 108px;
-          grid-column: 2 / 4;
-
-
-          .head_description{
-            @include font-size-15;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: -0.055em;
-
-            /* navbar page */
-
-            color: $text;
-
-            overflow-y: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-          }
-          .particle_description{
-            @include font-size-13;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 16px;
-
-            letter-spacing: -0.055em;
-
-            color: rgba(21, 37, 54, 0.5);
-
-            overflow-y: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-          }
-
-          .btn_description{
-            padding-top: 13px;
-            //border-bottom: 1px solid $accent;
-
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 15px;
-            /* identical to box height */
-
-            letter-spacing: -0.015em;
-
-            /* Actionable color */
-
-            color: $accent;
-            cursor: pointer;
-            user-select: none;
-
-          }
-        }
-        .info_item{
-          grid-template-rows: repeat(4,1fr);
-          height: 108px;
-          white-space: nowrap;
-          .available_info{
-            div{
-              @include font-size-15;
-              img{
-                margin-right: 7px;
-              }
-              font-style: normal;
-              font-weight: 400;
-              line-height: 18px;
-              letter-spacing: -0.055em;
-
-              color: #000000;
-            }
-          }
-
-          .coast_info{
-            @include font-size-15;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: -0.055em;
-
-            color: rgba(21, 37, 54, 0.5);
-
-            span{
-              font-style: normal;
-              font-weight: 700;
-              font-size: 15px;
-              line-height: 18px;
-              letter-spacing: -0.055em;
-            }
-          }
-
-          .counter_info{
-            @include font-size-15;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: -0.055em;
-
-            color: rgba(21, 37, 54, 0.5);
-          }
-
-          .buy_info{
-            width: 100%;
-            height: 27px;
-            border-color: rgba(0,0,0,0);
-            color: $background;
-            background: $accent;
-            border-radius: 6px;
-            cursor: pointer;
-          }
-        }
-
-      }
     }
   }
+}
+
+.item_products{
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: $gutter;
+  align-items: center;
+  .photo_item{
+    //photo
+    min-width: 137px;
+    height: 108px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+  }
+
+  .description_item{
+    height: 108px;
+    grid-column: 2 / 4;
+
+
+    .head_description{
+      @include font-size-15;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.055em;
+
+      /* navbar page */
+
+      color: $text;
+
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .particle_description{
+      @include font-size-13;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+
+      letter-spacing: -0.055em;
+
+      color: rgba(21, 37, 54, 0.5);
+
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .btn_description{
+      padding-top: 13px;
+      //border-bottom: 1px solid $accent;
+
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+
+      letter-spacing: -0.015em;
+
+      /* Actionable color */
+
+      color: $accent;
+      cursor: pointer;
+      user-select: none;
+
+    }
+  }
+  .info_item{
+    grid-template-rows: repeat(4,1fr);
+    height: 108px;
+    white-space: nowrap;
+    .available_info{
+      div{
+        @include font-size-15;
+        img{
+          margin-right: 7px;
+        }
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: -0.055em;
+
+        color: #000000;
+      }
+    }
+
+    .coast_info{
+      @include font-size-15;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.055em;
+
+      color: rgba(21, 37, 54, 0.5);
+
+      span{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.055em;
+      }
+    }
+
+    .counter_info{
+      @include font-size-15;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.055em;
+
+      color: rgba(21, 37, 54, 0.5);
+    }
+
+    .buy_info{
+      width: 100%;
+      height: 27px;
+      border-color: rgba(0,0,0,0);
+      color: $background;
+      background: $accent;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+
 }

@@ -133,7 +133,12 @@
         opacity: 0.8;
       }
 
-      button{
+      a{
+        justify-content: center;
+        align-items: center;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        text-decoration: none;
         @include font-size-15;
         width: 151px;
         height: 40px;
@@ -149,5 +154,70 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+.form-question-content{
+  padding: 27px 8.46% 26px;
+  grid-template-columns: 48.6% 192px 192px;
+  grid-template-rows: 54px 108px auto;
+  grid-column-gap: $gutter;
+  grid-row-gap: 14px;
+  width: 100%;
+  min-height: 283px;
+  background: $darker_white;
+
+  .form-question-title{
+    @include font-size-36;
+    grid-row: 1 / -1;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    align-self: center;
+    letter-spacing: -0.015em;
+  }
+  #form-question-textarea-div{
+    grid-column: 2 / -1;
+
+    textarea{
+      width: 100%;
+      height: 100%;
+      resize: none;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      min-width: 414px;
+    }
+  }
+  button{
+    @include font-size-15;
+    width: 78.6%;
+    height: 40px;
+  }
+  .flex{
+    flex-direction: column;
+    gap: 9px;
+    label{
+      white-space: nowrap;
+      color: $grey;
+      font-weight: bold;
+    }
+    input{
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      min-width: 192px;
+      padding-left: 5px;
+    }
+    .smart-captcha{
+      height: 0;
+      width: 0;
+    }
+
+    .error-empty{
+      position:absolute;
+      height: 0;
+      width: 0;
+    }
+  }
+  .input-privacy-div{
+    grid-column: 2 / 4;
   }
 }

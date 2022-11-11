@@ -1,5 +1,5 @@
-import { Filter } from "./filter/Filter";
-import { Sort } from "./sort/Sort";
+import { FilterComponent } from "./filter/FilterComponent";
+import { SortComponent } from "./sort/SortComponent";
 import { ListProducts } from "./ListProducts";
 
 
@@ -9,8 +9,8 @@ const Products = ({ children }) => (
     </div>
 )
 
-Products.Filter = Filter;
-Products.Sort = Sort;
+Products.Filter = FilterComponent;
+Products.Sort = SortComponent;
 Products.List = ListProducts;
 
 export { Products }

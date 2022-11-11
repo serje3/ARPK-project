@@ -24,6 +24,7 @@ function* productOneWorker({ payload: id }) {
 }
 
 const fetch = () => {
+    console.log('вызов продуктов')
     return axios.get(endpoints.products)
 }
 

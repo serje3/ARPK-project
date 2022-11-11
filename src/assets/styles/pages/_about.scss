@@ -1,0 +1,15 @@
+.about-content{
+  h1{
+    color: $grey;
+  }
+
+  .about-info{
+    margin-top: 20px;
+
+    a{
+      color: $accent;
+      text-decoration-color: $accent_darker;
+      text-underline-offset: 3px;
+    }
+  }
+}

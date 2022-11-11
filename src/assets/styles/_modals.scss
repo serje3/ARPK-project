@@ -1,19 +1,23 @@
+@use "sass:math";
 .main-header {
   .catalog-header {
     .modal_catalog {
       z-index: 101;
-      top: calc($header_height / 2 + 11px);
-      width: 238px;
+      top: math.div($header_height, 2) + 12px;
+      min-width: 238px;
       //height: 264px;
-      background-image: url("../img/svg/catalog_modal.svg");
+      //background-image: url("../img/svg/catalog_modal.svg");
+      background: $background;
+      border: 2px solid $lightgrey;
+      border-radius: 4px;
       position: absolute;
       transform: translateX(-25px);
       opacity: 0;
       transition: opacity 0.5s ease;
       visibility: hidden;
-      padding: 20px 16px 14px;
+      padding: 14px 16px 14px;
 
-      grid-template-rows: repeat(6, 27px);
+      grid-template-rows: repeat(auto-fit, 27px);
       grid-row-gap: 14px;
 
       .head_modal {
@@ -37,39 +41,42 @@
 
       .search_modal {
         display: none;
-        height: 27px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-        grid-template-columns: 1fr 16px 12px;
-        align-content: center;
+        form {
 
-        input {
-          @include font-size-13;
+          height: 27px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+          grid-template-columns: 1fr 16px 12px;
+          align-content: center;
 
-          padding: 3px 0 0;
-          border: 0;
-
-          &::placeholder {
-            @include base-font;
+          input {
             @include font-size-13;
-            color: $grey;
+
+            padding: 3px 0 0;
+            border: 0;
+
+            &::placeholder {
+              @include base-font;
+              @include font-size-13;
+              color: $grey;
+            }
+
+            &:focus {
+              outline: none;
+            }
           }
 
-          &:focus {
-            outline: none;
-          }
-        }
+          img {
+            margin-left: 2px;
+            width: 15px;
+            cursor: pointer;
 
-        img {
-          margin-left: 2px;
-          width: 15px;
-          cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
 
-          &:hover {
-            opacity: 0.8;
-          }
-
-          &:active {
-            opacity: 1;
+            &:active {
+              opacity: 1;
+            }
           }
         }
       }
@@ -83,6 +90,7 @@
         color: $text;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 1px;
+        min-height: 27px;
 
         grid-template-columns: 1fr 14px 12px;
         align-items: center;
@@ -292,6 +300,7 @@
   }
 }
 .content_buymodal{
+  overflow: hidden;
   margin: 30px;
 
   .product{
@@ -452,13 +461,29 @@
 
         }
       }
-    }
-    .error{
-      margin-top: 10px;
-      font-size: 14px;
-      .item_error{
-        color: red;
+      .input-privacy-div{
+        grid-column: 1 / -1;
       }
     }
   }
+
+  .smart-captcha{
+    margin-top: 20px;
+  }
+}
+
+.drop-down{
+  position: absolute;
+  background: $background;
+  border: 1px solid $accent;
+  border-radius: 3px;
+  min-width: 100%;
+  align-self: start;
+  z-index: 100;
+}
+
+.form-checkboxes{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

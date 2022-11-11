@@ -1,26 +1,28 @@
 import ellipseImg from "assets/img/svg/ellipse.svg";
 import { PageLink } from "../../common";
 import { useNavigate } from "react-router-dom";
+import { settings } from "../../../settings";
 
 
 export const ItemProduct = (props) => {
     const photoStyle = { backgroundImage: "url(" + props.photo + ")" }
     const navigate = useNavigate()
+    const routeToProduct = settings.routes.getProductRoute(props.id)
     return (
         <div className="item_products grid">
             <div className="photo_item" style={photoStyle}/>
             <div className="description_item grid">
-                <div className="head_description">{props.title}</div>
-                <div className="particle_description">{props.description}</div>
-                <PageLink className="btn_description" path={"/product/"+props.id}>Подробнее</PageLink>
+                <h2 className="head_description">{props.title}</h2>
+                <p className="particle_description">{props.description}</p>
+                <PageLink className="btn_description" path={routeToProduct}>Подробнее</PageLink>
             </div>
             <div className="info_item grid">
                 <div className="available_info">
-                    <div><img src={ellipseImg} alt=""/>В наличии</div>
+                    <div><img src={ellipseImg} width={props.isSearchPage?12:9} height={props.isSearchPage?12:9} alt="available icon"/>В наличии</div>
                 </div>
-                <div className="coast_info">Цена: <span>{props.coast} ₽</span></div>
-                <div className="counter_info">Количество <span>- 1 +</span></div>
-                <button className="buy_info" onClick={()=>navigate("/product/"+props.id+"?order=true")}>Купить</button>
+                <p className="coast_info">Цена: <span>{props.coast} ₽</span></p>
+                <p className="counter_info">Количество <span>- 1 +</span></p>
+                <button className="buy_info" onClick={()=>navigate(routeToProduct+"?order=true")}>Купить</button>
             </div>
         </div>
     )

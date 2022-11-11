@@ -1,7 +1,7 @@
 import axios from "axios";
-import { endpoints } from "../endpoints";
+import { endpoints } from "../../endpoints";
 import { call, put } from "redux-saga/effects";
-import { FETCH_SUBCATEGORIES, RESET_SUBCATEGORIES } from "../../redux/types";
+import { FETCH_SUBCATEGORIES, RESET_SUBCATEGORIES } from "../../../redux/types";
 
 
 function* subcategoryWorker({ payload: categoryId }) {

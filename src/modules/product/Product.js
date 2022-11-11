@@ -1,47 +1,62 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchOneProduct } from "../../redux/actions";
 import { Breadcrumb } from "../common";
-import ellipseImg from "../../assets/img/svg/ellipse.svg";
 import { useProductBreadcrumb } from "./components/hooks/useProductBreadcrumb";
-import { BuyModal } from "./components/BuyModal";
+import { BuyModalForm } from "./components/BuyModal";
+import { InvisibleSmartCaptcha } from "@yandex/smart-captcha";
+import { settings } from "../../settings";
+import { ProductInfo } from "./components/ProductInfo";
+import { useProductData } from "./components/hooks/useProductData";
+import { Helmet } from "react-helmet-async";
 
 
 export const Product = () => {
     let { id } = useParams()
-    const dispatch = useDispatch()
-    const product_data = useSelector(state => state.api.currentProduct)
+    const [product_data, isEmpty] = useProductData(id)
     const [buyModalIsOpen, setBuyModalIsOpen] = useState(false);
 
-    if (product_data.id !== parseInt(id))
-        dispatch(fetchOneProduct(id))
-
-    if (product_data.id === -1)
-        return null
+    const [visible, setVisible] = useState(false)
+    const [token, setToken] = useState('')
 
     return (
-        <div className="product_page">
-            <Breadcrumb usePageManager={useProductBreadcrumb}/>
-            <div className="product grid">
-                <div className="title_description grid">
-                    <div className="title">{product_data.name}</div>
-                    <div className="description">{product_data.description + product_data.description}</div>
-                </div>
-                <div className="product_other grid">
-                    <div style={{
-                        backgroundImage: 'url("' + product_data.photo + '")',
-                    }} className="photo"/>
-                    <div className="info_product_other flex">
-                        <div className="available flex"><img src={ellipseImg} alt=""/>В наличии</div>
-                        <div className="coast">{product_data.price}</div>
-                        <div className="counter">{product_data.count}</div>
-                    </div>
-                    <button className="buy-btn" onClick={() => setBuyModalIsOpen(true)}>Купить</button>
-                </div>
-
+        <>
+            {
+                isEmpty ?
+                    null :
+                    <Helmet>
+                        <title>{product_data.name}</title>
+                        <meta name="description" content={product_data.description}/>
+                        <link rel="canonical" href={settings.routes.getProductRoute(id)}/>
+                    </Helmet>
+            }
+            <div className="product_page">
+                <Breadcrumb usePageManager={useProductBreadcrumb}/>
+                {
+                    isEmpty ?
+                        <ProductInfo.EmptyBound/>
+                        :
+                        <>
+                            <ProductInfo
+                                product_data={product_data}
+                                setModalOpen={() => setBuyModalIsOpen(true)}
+                            />
+                            <BuyModalForm
+                                modalIsOpen={buyModalIsOpen}
+                                setIsOpen={setBuyModalIsOpen}
+                                product={product_data}
+                                setVisible={(bool) => setVisible(bool)}
+                                token={token}
+                                setToken={(_token) => setToken(_token)}
+                            />
+                        </>
+                }
+                <InvisibleSmartCaptcha
+                    sitekey={settings.yandexSmartCaptchaToken}
+                    onSuccess={setToken}
+                    onChallengeHidden={() => setVisible(false)}
+                    visible={visible}
+                    hideShield={true}/>
             </div>
-            <BuyModal modalIsOpen={buyModalIsOpen} setIsOpen={setBuyModalIsOpen} product={product_data}/>
-        </div>
+        </>
     )
 }

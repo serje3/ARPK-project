@@ -3,75 +3,109 @@ import ListCategories from "./ListCategories";
 import { withQuery } from "hoc/withQuery";
 import { connect } from "react-redux";
 import { fetchSubcategories, resetSubcategories } from "../../../redux/actions";
+import { Helmet } from "react-helmet-async";
+import { settings } from "../../../settings";
 
 
 class NavigationProducts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            category: parseInt(props.query.get('category-id')) || 0,
+            categoryId: parseInt(props.query.get('category-id')) || 0,
         }
     }
 
     shouldShowBrends(currentCategory) {
-        return this.state.category === currentCategory.id && this.props.subcategories.length !== 0
+        return this.state.categoryId === currentCategory.id && this.props.subcategories.length !== 0
     }
 
-    handleCategory(currentCategory) {
-        this.setState({ category: currentCategory.id })
+    handleSetCategory(currentCategory) {
+        this.setState({ categoryId: currentCategory.id })
+    }
+
+    handleMetaCategories() {
+        const category = this.findCategory()
+        if (category) {
+            this.props.handleMeta(`${category.name}. `)
+        } else {
+            // reset meta description
+            this.props.handleMeta()
+        }
     }
 
 
     componentDidMount() {
-        if (this.state.category !== 0 && !isNaN(this.state.category)) {
-            this.props.fetchSubcategories(this.state.category)
+        if (this.state.categoryId !== 0 && !isNaN(this.state.categoryId)) {
+            this.props.fetchSubcategories(this.state.categoryId)
         }
     }
 
     componentDidUpdate(prevProps, prevState, snap) {
-        const category = parseInt(this.props.query.get('category-id'));
-        if (!isNaN(this.state.category) && category !== 0 && parseInt(prevProps.query.get('category-id')) !== category) {
-            this.handleCategory({ id: category })
-        } else if ((category === 0 && this.props.subcategories.length !== 0) ||
-            (isNaN(this.state.category) && this.props.subcategories.length !== 0)) {
+        const categoryId = parseInt(this.props.query.get('category-id'));
+        if (!isNaN(this.state.categoryId) && categoryId !== 0 && parseInt(prevProps.query.get('category-id')) !== categoryId) {
+            this.handleSetCategory({ id: categoryId })
+        } else if ((categoryId === 0 && this.props.subcategories.length !== 0) ||
+            (isNaN(this.state.categoryId) && this.props.subcategories.length !== 0)) {
             this.props.resetSubcategories()
         }
-        if (prevState.category !== this.state.category && !isNaN(this.state.category)) {
-            this.props.fetchSubcategories(this.state.category)
+        if (prevState.categoryId !== this.state.categoryId && !isNaN(this.state.categoryId)) {
+            this.handleMetaCategories()
+            this.props.fetchSubcategories(this.state.categoryId)
         }
     }
 
+    findCategory = () => {
+        return this.props.categories.find((value) => value.id === this.state.categoryId)
+    }
+
     findCategoryName = () => {
-        console.log(this.props.categories)
-        const category = this.props.categories.find((value) => value.id === this.state.category)
-        if (category === undefined)
-            return "Ошибка"
-        return category.name
+        if (this.state.categoryId === 0 || !this.props.query.get('category-id') || this.props.categories.length === 0) {
+            return "Каталог"
+        } else {
+            const category = this.findCategory()
+            if (!category)
+                return "Ошибка"
+            return category.name
+        }
+    }
+
+    getCanonialHref() {
+        let route = settings.routes.Catalog
+        const categoryId = this.props.query.get('category-id')
+        const subcategoryId = this.props.query.get('subcategory-id')
+
+        if (categoryId) {
+            route += `?category-id=${categoryId}`
+            if (subcategoryId)
+                route += `&subcategory-id=${subcategoryId}`
+        }
+        return route
     }
 
     render() {
         return (
-            <div className="navigation_catalog">
-                <div className="head_navigation flex">{
-                    this.state.category === 0 || !this.props.query.get('category-id') || this.props.categories.length === 0 ?
-                        "Каталог"
-                        :
+            <>
+                <Helmet>
+                    <link rel="canonical" href={this.getCanonialHref()}/>
+                </Helmet>
+                <div className="navigation_catalog">
+                    <h1 className="head_navigation flex">{
                         this.findCategoryName()
-                }</div>
-                <ListCategories
-                    categories={this.props.categories}
-                    subcategories={this.props.subcategories}
-                    handleCategoryClick={this.handleCategory.bind(this)}
-                    shouldShowBrends={this.shouldShowBrends.bind(this)}
-                />
-            </div>
+                    }</h1>
+                    <ListCategories
+                        categories={this.props.categories}
+                        subcategories={this.props.subcategories}
+                        handleCategoryClick={this.handleSetCategory.bind(this)}
+                        shouldShowBrends={this.shouldShowBrends.bind(this)}
+                    />
+                </div>
+            </>
         )
     }
 }
 
 const mapStateToProps = state => ({
     subcategories: state.api.subcategories || []
-
 })
 
 const mapDispatchToProps = {

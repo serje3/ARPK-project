@@ -1,14 +1,21 @@
-const hostUrl = "http://localhost:8000/api/";
+import { settings } from "../settings";
+
+
+const apiUrl = settings.apiUrl
 
 export const endpoints = {
     // GET
-    products: hostUrl + "products/",
+    products: apiUrl + "products/",
     // GET
-    getProductOne: (id) => hostUrl + "products/" + id,
+    getProductOne: (id) => apiUrl + "products/" + id,
     // GET
-    category: hostUrl + "category/",
+    category: apiUrl + "category/",
     // GET
-    getSubCategory: (id) => hostUrl + "category/" + id,
+    getSubCategory: (id) => apiUrl + "category/" + id,
     // POST
-    orders: hostUrl + "orders/"
+    orders: apiUrl + "orders/",
+    // POST
+    question: apiUrl + "question/",
+    // POST
+    serviceOrder: apiUrl + "service-order/"
 }

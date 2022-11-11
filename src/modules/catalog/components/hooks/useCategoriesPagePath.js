@@ -19,7 +19,6 @@ export const useCategoriesPagePath = (pagePath) => {
                 id: category.id
             })
         }
-
     }
     return React.useMemo(() => path, [path])
 }

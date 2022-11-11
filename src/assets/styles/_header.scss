@@ -41,6 +41,10 @@
     gap: 8px;
     cursor: pointer;
 
+    img{
+      align-self: center;
+    }
+
     &:active {
       color: $text;
     }

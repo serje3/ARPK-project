@@ -11,7 +11,7 @@ body {
   display: grid;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
@@ -29,41 +29,53 @@ body {
   grid-row-gap: $gutter;
 }
 
-button{
-  &:hover{
-    opacity: 0.8;
+button {
+  border: 1px solid $accent;
+  border-radius: 6px;
+  color: $accent;
+  background: $background;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
   }
 
-  &:active{
+  &:active {
     opacity: 1;
   }
 }
 
-.h1{
+select {
+  border: 1px solid $accent;
+  border-radius: 6px;
+  outline-color: $accent_darker;
+}
+
+.h1 {
   @include font-size-36;
 }
 
-.h2{
+.h2 {
   @include font-size-32;
 }
 
-.h3{
+.h3 {
   @include font-size-24;
 }
 
-.h4{
+.h4 {
   @include font-size-18;
 }
 
-.p{
+.p {
   @include font-size-15;
 }
 
-.span{
+.span {
   @include font-size-13;
 }
 
-#overlay{
+#overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -72,15 +84,134 @@ button{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $darkgrey ; /* Black background with opacity */
+  background-color: $darkgrey; /* Black background with opacity */
   z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
 }
 
 /* Убираем стандартный маркер Chrome */
-details summary::-webkit-details-marker {
+.overlay-details summary::-webkit-details-marker {
   display: none
 }
+
 /* Убираем стандартный маркер Firefox */
-details > summary {
+.overlay-details > summary {
   list-style: none;
+}
+
+.success {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 10px;
+  font-size: 14px;
+
+  .item_error {
+    color: red;
+  }
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+
+    :last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.details-block {
+  transition: slideDown 3s ease-in;
+  position: relative;
+  overflow: hidden;
+
+  summary {
+    list-style: none;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+
+    &:before {
+      content: '';
+      border-width: .5rem;
+      border-style: solid;
+      border-color: transparent transparent transparent $text;
+      position: absolute;
+      left: .3rem;
+      top: .13rem;
+      transform: rotate(0);
+      transform-origin: .2rem 50%;
+      transition: .25s transform ease;
+    }
+  }
+
+  &[open] {
+    summary:before {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &[open] summary ~ * {
+    animation: slideDown .5s ease-in-out;
+  }
+}
+
+
+.page {
+  grid-template-rows: auto 1fr;
+  grid-row-gap: $row_gutter;
+
+  h1 {
+    color: $grey;
+  }
+
+  .page_content_flex{
+    display: flex;
+    flex-direction: column;
+    gap: $row_gutter;
+  }
+
+  .page_content {
+    strong {
+      font-weight: bold;
+    }
+
+    h2 {
+      color: $grey;
+    }
+
+    p {
+      color: $text;
+    }
+  }
+}
+
+.input-privacy-div{
+  label > a{
+    color: $accent;
+    text-decoration-color: $accent_darker;
+    text-underline-offset: 3px;
+  }
 }
