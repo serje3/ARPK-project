@@ -52,7 +52,7 @@ class Order(models.Model):
         verbose_name = "заказ"
 
     product = models.ForeignKey(Product, on_delete=models.RESTRICT, null=True, verbose_name="Товар")
-    name_client = models.CharField(max_length=20, default="Безымянный", verbose_name="Имя клиента")
+    name_client = models.CharField(max_length=30, default="Безымянный", verbose_name="Имя клиента")
     phone_number = PhoneNumberField(verbose_name='Номер телефона', null=False)
     email = models.EmailField(null=False)
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
@@ -75,3 +75,18 @@ class Order(models.Model):
 
     def __str__(self):
         return f"{self.id} - {self.product.name}"[:30]
+
+
+class Question(models.Model):
+    class Meta:
+        verbose_name_plural = "Вопросы"
+        verbose_name = "вопрос"
+
+    email = models.EmailField(null=False)
+    name = models.CharField(max_length=30, default="Безымянный", verbose_name="Имя")
+    content = models.TextField(max_length=500, verbose_name="Содержание вопроса")
+
+    def __str__(self):
+        return f"{self.id} - {self.name} - {self.content[:100]}"
+
+

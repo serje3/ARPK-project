@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from shop.models import Category, SubCategory, Product, Order
+from shop.models import Category, SubCategory, Product, Order, Question
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -26,3 +26,9 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ['product', 'name_client', 'phone_number', 'email']
+
+
+class QuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Question
+        fields = ['email', 'name', 'content']

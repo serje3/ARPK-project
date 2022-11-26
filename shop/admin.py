@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, SubCategory, Product, Order
+from .models import Category, SubCategory, Product, Order, Question
 
 
 # Register your models here.
@@ -26,3 +26,6 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ['-date']
 
 
+@admin.register(Question)
+class QuestionAdmin(admin.ModelAdmin):
+    pass

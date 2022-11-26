@@ -1,0 +1,1610 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-10-06T12:29:30.149Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Category object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-10-06T12:29:35.302Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Category object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-10-06T12:29:38.928Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Category object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-10-06T12:29:43.610Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Category object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-10-06T12:31:31.407Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "BMW",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-10-06T12:31:37.517Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "MAZDA",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-10-06T12:33:52.434Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "BOSCH - Дизельные форсунки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-10-06T12:33:55.802Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Форсунка MERCEDES 0445116055",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-10-06T12:35:09.842Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1 - Форсунка MERCEDES 04451160",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-10-06T12:37:12.726Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1 - Форсунка MERCEDES 04451160",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-10-06T12:39:47.326Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1 - Форсунка MERCEDES 04451160",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-10-06T12:42:36.658Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1 - Форсунка MERCEDES 04451160",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name client\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-10-06T13:45:57.937Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "2 - Форсунка MERCEDES 04451160",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-10-06T14:01:30.259Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Только просмотр",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-10-06T14:01:52.411Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Тестовый",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-10-06T14:02:03.820Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Тестовый",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-10-06T14:03:16.767Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "TEST",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-10-06T14:03:54.432Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "TEST",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-10-06T14:04:12.368Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TEST",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-10-06T14:04:19.649Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TEST",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-10-06T14:06:33.078Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TEST",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-10-06T14:07:47.653Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TEST",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-10-06T14:11:19.309Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Редактирование",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-10-06T14:11:26.910Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Просмотр",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-10-06T14:13:06.321Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Удаление",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-10-06T14:13:09.937Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Удаление",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-10-06T14:14:03.058Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Добавление",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-10-07T14:18:33.128Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Форсунка BOSCH 0445116055",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-10-07T14:19:22.328Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "3 - Форсунка BOSCH 0445116055",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-10-08T10:41:33.689Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Форсунка BOSCH 0445112412",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-10-08T10:52:54.391Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "4 - Форсунка MERCEDES 04451160",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-10-08T10:52:54.399Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "3 - Форсунка BOSCH 0445116055",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-10-08T10:52:54.399Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "2 - Форсунка MERCEDES 04451160",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-10-08T10:52:54.407Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1 - Форсунка MERCEDES 04451160",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-10-08T10:53:15.571Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Форсунка BOSCH 0445116055",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-10-08T10:53:15.579Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Форсунка MERCEDES 0445116055",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-10-12T08:00:17.126Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Форсунка MERCEDES 0445116055",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-10-16T09:39:51.614Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "TOYOTA - Бензиновые форсунки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2022-10-16T09:40:06.003Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "FIAT - ТНВД",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2022-10-16T09:40:12.650Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "NISSAN - Топливные форсунки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2022-10-16T11:27:50.592Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Форсунка  NISSAN 0445116055",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2022-10-17T21:09:33.030Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "5 - Форсунка BOSCH 0445112412",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2022-10-18T15:19:03.862Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "6 - Форсунка BOSCH 0445112412",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2022-10-29T01:15:44.838Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "2 - sergey - dsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaa",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0430\\u043d\\u0438\\u0435 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\\u0430\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 7,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 7,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 7,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 7,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add sub category",
+    "content_type": 8,
+    "codename": "add_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change sub category",
+    "content_type": 8,
+    "codename": "change_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete sub category",
+    "content_type": 8,
+    "codename": "delete_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view sub category",
+    "content_type": 8,
+    "codename": "view_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 9,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 9,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 9,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 9,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 10,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 10,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 10,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 10,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add вопрос",
+    "content_type": 11,
+    "codename": "add_question"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change вопрос",
+    "content_type": 11,
+    "codename": "change_question"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete вопрос",
+    "content_type": 11,
+    "codename": "delete_question"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view вопрос",
+    "content_type": 11,
+    "codename": "view_question"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Просмотр",
+    "permissions": [
+      28,
+      40,
+      36,
+      32
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Редактирование",
+    "permissions": [
+      26,
+      38,
+      34,
+      30
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Удаление",
+    "permissions": [
+      27,
+      39,
+      35,
+      31
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "Добавление",
+    "permissions": [
+      25,
+      37,
+      33,
+      29
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$SOUy6nNCkkEHEKrqvaGwGT$KK0waluKXssV7FzPuA3MYvORYqG5L6zmgKpOUBfXgyM=",
+    "last_login": "2022-10-29T01:13:57.435Z",
+    "is_superuser": true,
+    "username": "serje3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-06T12:27:04.807Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$nfuTZi6BFIcfzXAdubVIqN$HhQ9Xxcl68WiWqrlPtbZmLWF0bZ1RgddgwZVoT4CedA=",
+    "last_login": "2022-10-06T14:07:57.594Z",
+    "is_superuser": false,
+    "username": "TEST",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-06T14:04:12Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "10yqkhszz7p3nfeu8zu6vhjf5g9ljhco",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHTBzB16d5vIMDMSNVAUtqV8d-1SRe6veec-1I-bGv2W-PFz6TOqlOn3y2G9OCyA7qHcqs61bIuc9S7og_a9LUSPy-H-3eQQ8vfmmNiK07MiEyChpIka0aOpnM0AQL0UXpwA1roaQCZHAY0AzKMLoCo9wcDgjfl:1ooaQ9:J8IkoJRaztVOfOn4g8VoASI4sQ8EiiksUXJkKKY622M",
+    "expire_date": "2022-11-12T01:13:57.443Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1lpy29a8tsmhu7yv4sadyi5ohglu6vt7",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHTBzB16d5vIMDMSNVAUtqV8d-1SRe6veec-1I-bGv2W-PFz6TOqlOn3y2G9OCyA7qHcqs61bIuc9S7og_a9LUSPy-H-3eQQ8vfmmNiK07MiEyChpIka0aOpnM0AQL0UXpwA1roaQCZHAY0AzKMLoCo9wcDgjfl:1oiWUg:qMZYJ7s3B1qu1ThjISz7e5dn3chtopfd9CF5QOwP02k",
+    "expire_date": "2022-10-26T07:49:34.538Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pbet6b54qviwhuc1w5x0p6m48yup4y65",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHTBzB16d5vIMDMSNVAUtqV8d-1SRe6veec-1I-bGv2W-PFz6TOqlOn3y2G9OCyA7qHcqs61bIuc9S7og_a9LUSPy-H-3eQQ8vfmmNiK07MiEyChpIka0aOpnM0AQL0UXpwA1roaQCZHAY0AzKMLoCo9wcDgjfl:1ogpRO:g2vWC2L5tkxquA3J-GJAiFQz2cRaHixDuEL-Ae0FBxU",
+    "expire_date": "2022-10-21T15:39:10.583Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qv1hbg50rofp926p4p946nnw8m7tnydr",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHTBzB16d5vIMDMSNVAUtqV8d-1SRe6veec-1I-bGv2W-PFz6TOqlOn3y2G9OCyA7qHcqs61bIuc9S7og_a9LUSPy-H-3eQQ8vfmmNiK07MiEyChpIka0aOpnM0AQL0UXpwA1roaQCZHAY0AzKMLoCo9wcDgjfl:1ogRa8:vCaEJXFRE67zeo189XE1C0-14ZKdWOh-JK4snd4wW1U",
+    "expire_date": "2022-10-20T14:10:36.331Z"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "Дизельные форсунки"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "Топливные форсунки"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "ТНВД"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "Бензиновые форсунки"
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 1,
+  "fields": {
+    "name": "BMW",
+    "category": 1
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 2,
+  "fields": {
+    "name": "MAZDA",
+    "category": 1
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 3,
+  "fields": {
+    "name": "BOSCH",
+    "category": 1
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 4,
+  "fields": {
+    "name": "TOYOTA",
+    "category": 4
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 5,
+  "fields": {
+    "name": "FIAT",
+    "category": 3
+  }
+},
+{
+  "model": "shop.subcategory",
+  "pk": 6,
+  "fields": {
+    "name": "NISSAN",
+    "category": 2
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "Форсунка BOSCH 0445112412",
+    "description": "Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412 Форсунка BOSCH 0445112412",
+    "price": 23042,
+    "photo": "product/2022/10/08/artworks-000330768216-e6czg4-t500x500.jpg",
+    "subcategory": 1,
+    "count": 3,
+    "display": true
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "Форсунка MERCEDES 0445116055",
+    "description": "Форсунка MERCEDES 0445116055Форсунка MERCEDES 0445116055Форсунка MERCEDES 0445116055Форсунка MERCEDES 0445116055 Форсунка MERCEDES 0445116055Форсунка MERCEDES 0445116055Форсунка MERCEDES 0445116055",
+    "price": 1000000,
+    "photo": "product/2022/10/12/3.jpg",
+    "subcategory": 2,
+    "count": 2,
+    "display": true
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "name": "Форсунка  NISSAN 0445116055",
+    "description": "Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055 Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055Форсунка  NISSAN 0445116055",
+    "price": 3211213,
+    "photo": "product/2022/10/16/xF9OkLsLE6Y.jpg",
+    "subcategory": 6,
+    "count": 23,
+    "display": true
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 1,
+  "fields": {
+    "product": 3,
+    "name_client": "ПЕПЕГА",
+    "phone_number": "+79066579292",
+    "email": "serega@gmail.com",
+    "date": "2022-10-18T15:28:56.817Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 2,
+  "fields": {
+    "product": 3,
+    "name_client": "ПЕПЕГА",
+    "phone_number": "+79066579292",
+    "email": "serega@gmail.com",
+    "date": "2022-10-18T15:29:20.726Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 3,
+  "fields": {
+    "product": 3,
+    "name_client": "_",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:11:37.963Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 4,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:20:03.847Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 5,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:32:10.174Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 6,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:33:21.067Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 7,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:37:38.789Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 8,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:38:50.465Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 9,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:43:45.293Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 10,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:56:13.460Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 11,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T16:57:47.418Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 12,
+  "fields": {
+    "product": 5,
+    "name_client": "пидорас",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-18T17:00:51.312Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 13,
+  "fields": {
+    "product": 3,
+    "name_client": "Пизда Сковорода",
+    "phone_number": "+79066569292",
+    "email": "loh@ebaniy.ru",
+    "date": "2022-10-19T15:07:55.096Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 14,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-26T00:24:28.201Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 15,
+  "fields": {
+    "product": 3,
+    "name_client": "Сергей",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-28T14:43:08.351Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 16,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:01:47.602Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 17,
+  "fields": {
+    "product": 3,
+    "name_client": "dsads",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:02:33.507Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 18,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:06:58.924Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 19,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:50:53.808Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 20,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:52:25.797Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 21,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:53:14.548Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 22,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:53:35.915Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 23,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:57:16.849Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 24,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:57:18.627Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 25,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T02:57:41.988Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 26,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T03:01:28.500Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 27,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T03:04:51.942Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 28,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:23:04.038Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 29,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:29:36.432Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 30,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:34:52.610Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 31,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:40:37.540Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 32,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:43:47.191Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 33,
+  "fields": {
+    "product": 3,
+    "name_client": "Sergey Erin",
+    "phone_number": "+79066579292",
+    "email": "serjerin322@gmail.com",
+    "date": "2022-10-29T13:51:29.578Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 34,
+  "fields": {
+    "product": 5,
+    "name_client": "Ivan Ivanov",
+    "phone_number": "+79066579292",
+    "email": "aye@gmail.com",
+    "date": "2022-10-29T13:52:41.471Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 35,
+  "fields": {
+    "product": 4,
+    "name_client": "DEBIL",
+    "phone_number": "+79066579292",
+    "email": "debil@gmail.com",
+    "date": "2022-10-29T14:01:03.628Z"
+  }
+},
+{
+  "model": "shop.question",
+  "pk": 1,
+  "fields": {
+    "email": "serjerin322@gmail.com",
+    "name": "debil",
+    "content": "test"
+  }
+},
+{
+  "model": "shop.question",
+  "pk": 2,
+  "fields": {
+    "email": "serjerin322@gmail.com",
+    "name": "sergey",
+    "content": "dsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasddsaasdasdasd"
+  }
+}
+]

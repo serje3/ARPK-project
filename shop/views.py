@@ -1,14 +1,14 @@
-import django_filters.rest_framework
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 
-from shop.mixins import CategoryFilterMixin
-from shop.models import Category, SubCategory, Product, Order
-from shop.serializers import CategorySerializer, SubCategorySerializer, ProductSerializer, OrderSerializer
+from shop.mixins import CategoryFilterMixin, SendMailMixin
+from shop.models import Category, SubCategory, Product
+from shop.permissions import PrivacyPermission, CaptchaPermission
+from shop.serializers import CategorySerializer, SubCategorySerializer, ProductSerializer, OrderSerializer, \
+    QuestionSerializer
 
 
 class CategoryList(generics.ListAPIView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.order_by('name')
     serializer_class = CategorySerializer
 
 
@@ -17,7 +17,7 @@ class SubCategoryList(CategoryFilterMixin, generics.ListAPIView):
     Filtered by Category field
     url kwarg "category"
     """
-    queryset = SubCategory.objects.all()
+    queryset = SubCategory.objects.order_by('name')
     serializer_class = SubCategorySerializer
 
 
@@ -34,6 +34,11 @@ class ProductRetrieve(generics.RetrieveAPIView):
     lookup_url_kwarg = 'id'
 
 
-class OrderCreate(generics.CreateAPIView):
-    queryset = Order.objects.all()
+class OrderCreate(SendMailMixin, generics.CreateAPIView):
     serializer_class = OrderSerializer
+    permission_classes = [PrivacyPermission, CaptchaPermission]
+
+
+class QuestionCreate(generics.CreateAPIView):
+    serializer_class = QuestionSerializer
+    permission_classes = [PrivacyPermission, CaptchaPermission]

@@ -11,25 +11,28 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from configparser import RawConfigParser
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+config = RawConfigParser()
+config.read(BASE_DIR / 'settings.ini')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-wf+d0@m+bo=#wa#r7mkhatne!2_4@3p!yjty@jg-6i@oi2lg9g'
+SECRET_KEY = config.get('secret', 'secret_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(config.get('general', 'debug'))
 
 ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000'
+    config.get('general', 'allowed_origin')
 ]
-
 
 # Application definition
 
@@ -44,6 +47,8 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'shop',
+    'services',
+    'news'
 ]
 
 MIDDLEWARE = [
@@ -88,7 +93,17 @@ WSGI_APPLICATION = 'arpk_server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3'
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'u1819297_test',
+        # 'USER': 'u1819297_serje3',
+        # 'PASSWORD': 'cE2gJ8nN6o',
+        # 'HOST': '31.31.198.45',
+        # 'PORT': '',
+        # 'OPTIONS': {
+        #     'sql_mode':'traditional',
+        #     'charset': 'utf8'
+        # }
     }
 }
 
@@ -134,7 +149,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    config.get('general', 'allowed_origin'),
 ]
+
+EMAIL_HOST = config.get('email', 'HOST')
+EMAIL_PORT = config.get('email', 'PORT')
+EMAIL_HOST_USER = config.get('email', 'HOST_USER')
+EMAIL_HOST_PASSWORD = config.get('email', 'HOST_PASSWORD')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+SMARTCAPTCHA_SERVER_KEY = config.get('captcha', 'YANDEX_SERVER_KEY')

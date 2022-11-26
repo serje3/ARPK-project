@@ -22,8 +22,9 @@ from arpk_server import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('shop.urls', namespace='shop')),
+    path('api/services/', include('services.urls', namespace='services')),
+    path('api/news/', include('news.urls', namespace='news'))
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

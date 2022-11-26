@@ -1,0 +1,6 @@
+# db.cnf
+database = u1819297_test
+user = u1819297_serje3
+password = cE2gJ8nN6o
+host = 31.31.198.45
+default-character-set = utf8
