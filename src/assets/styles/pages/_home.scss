@@ -1,4 +1,4 @@
-.home-content{
+.home-content {
   grid-gap: $gutter;
 }
 
@@ -7,19 +7,22 @@
 
   //grid options
   grid-template-columns: 8.22fr 7.82fr;
+
   .info_panel {
     background: #EAEAEA;
     border-radius: 5px 0 0 5px;
     //grid options
     align-items: center;
-    .block_info_panel{
+
+    .block_info_panel {
       //grid options
       align-content: space-between;
-      grid-row-gap: 15px;
-      min-height: 307px;
+      grid-row-gap: 30px;
+      min-height: 45%;
       max-width: 61%;
       margin-left: 16.5%;
-      .h1{
+
+      .h1 {
         font-style: normal;
         font-weight: 400;
         line-height: 60px;
@@ -30,7 +33,7 @@
         color: $black;
       }
 
-      .p{
+      .p {
         //margin-top: 18px;
         //margin-bottom: 27px;
         font-style: normal;
@@ -43,7 +46,7 @@
         color: $black;
       }
 
-      button{
+      button {
         font-size: 17px;
         align-self: end;
         width: 192px;
@@ -74,14 +77,14 @@
   }
 }
 
-.services-content{
-  min-height: 820px;
+.services-content {
+  //min-height: 820px;
   //width: 83.07%;
   margin: 0 8.46%;
   padding: 64px 0;
   grid-template-rows: auto 1fr;
 
-  .head-48-services{
+  .head-48-services {
     width: 69%;
     font-style: normal;
     font-weight: 400;
@@ -94,21 +97,20 @@
     color: $black;
   }
 
-  .list-services{
+  .list-services {
     min-height: 100%;
     padding-top: 64px;
     //height: inherit;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-column-gap: $gutter;
     grid-row-gap: 56px;
 
-    .item{
+    .item {
       display: grid;
       grid-template-rows: auto 1fr 40px;
       grid-row-gap: 24px;
 
-      .h1-item{
+      .h1-item {
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -120,7 +122,7 @@
         color: $black;
       }
 
-      .p-item{
+      .p-item {
         @include font-size-18;
         font-style: normal;
         font-weight: 400;
@@ -133,7 +135,7 @@
         opacity: 0.8;
       }
 
-      a{
+      a {
         justify-content: center;
         align-items: center;
         -webkit-appearance: button;
@@ -157,17 +159,94 @@
   }
 }
 
-.form-question-content{
+.news-content {
+  margin: 0 8.46%;
+
+  gap: 5px;
+
+  h2 {
+    padding-bottom: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+  }
+
+  hr {
+    opacity: 0.2;
+  }
+
+  .post_news {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+
+    h3 {
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      color: $black;
+      opacity: 0.8;
+      font-weight: 400;
+      max-width: 50%;
+      line-height: 26px;
+    }
+
+    sub {
+      color: $grey;
+    }
+
+    a {
+      color: $accent;
+      text-underline-offset: 3px;
+    }
+
+  }
+
+  .btn_change_post {
+    max-width: calc(50% - 30px);
+    align-items: center;
+    margin: 1rem 0 0;
+    gap: 1rem;
+
+    button {
+      width: 50%;
+      font-size: 15px;
+    }
+  }
+
+  .a_show_all_news {
+    height: 40px;
+
+    a {
+      align-items: center;
+      justify-content: center;
+      width: 151px;
+      height: 40px !important;
+      text-decoration: none;
+      border-radius: 6px;
+      color: $background;
+      font-size: 15px;
+      background: $accent;
+    }
+  }
+}
+
+.form-question-content {
   padding: 27px 8.46% 26px;
   grid-template-columns: 48.6% 192px 192px;
   grid-template-rows: 54px 108px auto;
   grid-column-gap: $gutter;
   grid-row-gap: 14px;
   width: 100%;
+  min-width: 900px;
   min-height: 283px;
   background: $darker_white;
 
-  .form-question-title{
+  .form-question-title {
     @include font-size-36;
     grid-row: 1 / -1;
     font-family: 'Montserrat', serif;
@@ -177,10 +256,11 @@
     align-self: center;
     letter-spacing: -0.015em;
   }
-  #form-question-textarea-div{
+
+  #form-question-textarea-div {
     grid-column: 2 / -1;
 
-    textarea{
+    textarea {
       width: 100%;
       height: 100%;
       resize: none;
@@ -188,36 +268,42 @@
       min-width: 414px;
     }
   }
-  button{
+
+  button {
     @include font-size-15;
     width: 78.6%;
     height: 40px;
   }
-  .flex{
+
+  .flex {
     flex-direction: column;
     gap: 9px;
-    label{
+
+    label {
       white-space: nowrap;
       color: $grey;
       font-weight: bold;
     }
-    input{
+
+    input {
       border: 1px solid rgba(0, 0, 0, 0.25);
       min-width: 192px;
       padding-left: 5px;
     }
-    .smart-captcha{
+
+    .smart-captcha {
       height: 0;
       width: 0;
     }
 
-    .error-empty{
-      position:absolute;
+    .error-empty {
+      position: absolute;
       height: 0;
       width: 0;
     }
   }
-  .input-privacy-div{
+
+  .input-privacy-div {
     grid-column: 2 / 4;
   }
 }

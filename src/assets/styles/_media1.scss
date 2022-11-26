@@ -100,9 +100,25 @@
       }
     }
   }
+
+
+  .news-content{
+    .post_news{
+      p{
+        max-width: 100%;
+      }
+    }
+  }
+
+  .product_page{
+    width: initial !important;
+    min-width: 70%;
+  }
+
   .form-question-content{
     grid-template-columns: 192px 1fr !important;
     grid-template-rows: 69px 54px 108px auto;
+    min-width: initial;
 
     .form-question-title{
       grid-column: 1 / 3;
@@ -201,6 +217,9 @@
   .service-page{
     $padding: 30px;
     h1{
+      padding: 0 $padding;
+    }
+    h2{
       padding: 0 $padding;
     }
     p{
@@ -374,6 +393,29 @@
             width: 100%;
           }
         }
+      }
+    }
+  }
+
+
+  .news-content{
+    margin-top: 10px;
+    h2{
+      font-size: 24px;
+    }
+
+    .post_news{
+      gap: 0.5rem;
+      h3{
+        font-size: 16px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    .btn_change_post{
+      button{
+        width: 100%;
       }
     }
   }

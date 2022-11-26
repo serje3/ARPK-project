@@ -1,0 +1,11 @@
+.news-page{
+  .news-content{
+    flex-direction: column;
+    gap: 1rem;
+    .post_news{
+      p{
+        max-width: 100% !important;
+      }
+    }
+  }
+}

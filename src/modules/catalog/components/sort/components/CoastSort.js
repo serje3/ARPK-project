@@ -36,8 +36,8 @@ export const CoastSort = () => {
                     >
                         <select defaultValue="help">
                             <option value="help" disabled hidden>Не выбрано</option>
-                            <option value="1">По убыванию</option>
-                            <option value="2">По нарастанию</option>
+                            <option value="1">По нарастанию</option>
+                            <option value="2">По убыванию</option>
                         </select>
                         <button type="reset">Сбросить</button>
                     </form>

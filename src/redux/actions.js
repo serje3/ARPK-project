@@ -1,9 +1,19 @@
 import {
-    INIT_RESET_SUBCATEGORIES, REQUEST_ALL_PRODUCTS_CATEGORIES,
-    REQUEST_CATEGORIES, REQUEST_CREATE_ORDER, REQUEST_CREATE_QUESTION, REQUEST_ONE_PRODUCT,
+    INIT_RESET_SUBCATEGORIES,
+    REQUEST_ALL_PRODUCTS_CATEGORIES,
+    REQUEST_CATEGORIES,
+    REQUEST_CREATE_ORDER,
+    REQUEST_CREATE_QUESTION,
+    REQUEST_ONE_PRODUCT,
     REQUEST_PRODUCTS,
-    REQUEST_SUBCATEGORIES, SAVE_FILTER, SAVE_SEARCHED, SAVE_SORT,
-    REQUEST_CREATE_SERVICE_ORDER, SET_ONE_PRODUCT
+    REQUEST_SUBCATEGORIES,
+    SAVE_FILTER,
+    SAVE_SEARCHED,
+    SAVE_SORT,
+    REQUEST_CREATE_SERVICE_ORDER,
+    SET_ONE_PRODUCT,
+    REQUEST_SERVICES,
+    REQUEST_ONE_SERVICE, REQUEST_NEWS
 } from "./types";
 
 
@@ -100,6 +110,30 @@ export function saveSearched(searchType, data){
         payload: {
             type: searchType,
             data: data
+        }
+    }
+}
+
+export function fetchServices(){
+    return {
+        type: REQUEST_SERVICES
+    }
+}
+
+export function fetchOneService(id){
+    return {
+        type: REQUEST_ONE_SERVICE,
+        payload: id
+    }
+}
+
+
+export function fetchNews(pathname, fetchImages = false){
+    return{
+        type: REQUEST_NEWS,
+        payload: {
+            pathname,
+            fetchImages
         }
     }
 }

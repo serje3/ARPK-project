@@ -3,9 +3,9 @@ import {
     INIT_RESET_SUBCATEGORIES, REQUEST_ALL_PRODUCTS_CATEGORIES,
     REQUEST_CATEGORIES,
     REQUEST_CREATE_ORDER,
-    REQUEST_CREATE_QUESTION, REQUEST_CREATE_SERVICE_ORDER,
-    REQUEST_ONE_PRODUCT,
-    REQUEST_PRODUCTS,
+    REQUEST_CREATE_QUESTION, REQUEST_CREATE_SERVICE_ORDER, REQUEST_NEWS,
+    REQUEST_ONE_PRODUCT, REQUEST_ONE_SERVICE,
+    REQUEST_PRODUCTS, REQUEST_SERVICES,
     REQUEST_SUBCATEGORIES
 } from "redux/types";
 import {
@@ -19,6 +19,8 @@ import {
 import { createQuestionWorker } from "./workers/createQuestionWorker";
 import { allProductCategoryWorker } from "./workers/allProductCategoryWorker";
 import { createServiceOrderWorker } from "./workers/createOrderWorker";
+import { serviceOneWorker, serviceWorker } from "./workers/serviceWorker";
+import { newsWorker } from "./workers/newsWorker";
 
 
 export function* sagaWatcher() {
@@ -31,4 +33,7 @@ export function* sagaWatcher() {
     yield takeLatest(REQUEST_CREATE_QUESTION, createQuestionWorker)
     yield takeLatest(REQUEST_CREATE_SERVICE_ORDER, createServiceOrderWorker)
     yield takeLatest(INIT_RESET_SUBCATEGORIES, subcategoryResetWorker)
+    yield takeLatest(REQUEST_SERVICES, serviceWorker)
+    yield takeLatest(REQUEST_ONE_SERVICE, serviceOneWorker)
+    yield takeLatest(REQUEST_NEWS, newsWorker)
 }

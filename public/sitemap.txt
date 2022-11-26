@@ -2,4 +2,7 @@ https://arpk-m.ru/
 https://arpk-m.ru/catalog
 https://arpk-m.ru/contacts
 https://arpk-m.ru/about
-https://arpk-m.ru/service/diagnostic-diesel-injectors
+https://arpk-m.ru/service/1
+https://arpk-m.ru/service/2
+https://arpk-m.ru/service/3
+https://arpk-m.ru/service/4

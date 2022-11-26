@@ -10,10 +10,11 @@ export const Service = (props) => {
             <Helmet>
                 <title>{props.meta.title}</title>
                 <meta name="description" content={props.meta.description}/>
-                <link rel="rel" href={props.route}/>
+                <link rel="canonical" href={props.route}/>
             </Helmet>
             <div className="service-page flex">
                 <h1 className="h3">{props.header}</h1>
+                <h2 className="h4">{props.h2}</h2>
                 <p className="description p"> {props.description}</p>
                 <div className="service-information flex">
                 {props.children}

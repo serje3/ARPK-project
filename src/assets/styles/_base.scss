@@ -187,7 +187,7 @@ table {
     color: $grey;
   }
 
-  .page_content_flex{
+  .page_content_flex {
     display: flex;
     flex-direction: column;
     gap: $row_gutter;
@@ -208,10 +208,51 @@ table {
   }
 }
 
-.input-privacy-div{
-  label > a{
+.input-privacy-div {
+  label > a {
     color: $accent;
     text-decoration-color: $accent_darker;
     text-underline-offset: 3px;
+  }
+}
+
+
+button[disabled] {
+  opacity: 0.3;
+}
+
+.image-slider {
+  position: relative;
+  $button_width: 50px;
+  justify-content: center;
+  .current{
+    width: inherit;
+    cursor: pointer;
+    -webkit-user-drag: none;
+  }
+  .previous, .next{
+    position: absolute;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    color: transparent;
+    font-size: 36px;
+    user-select: none;
+    width: $button_width;
+    &:hover{
+      background: $lightgrey;
+      color: $grey;
+      opacity: 0.5;
+      visibility: visible;
+    }
+  }
+  .previous{
+    left: 0;
+  }
+  .next{
+    top: 0;
+    right: 0;
   }
 }

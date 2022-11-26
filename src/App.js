@@ -13,6 +13,9 @@ import { RepairDieselInjector } from "./modules/services/RepairDieselInjector";
 import { RepairTurbo } from "./modules/services/RepairTurbo";
 import { RepairEngine } from "./modules/services/RepairEngine";
 import { Privacy } from "./modules/privacy/Privacy";
+import { ServicePage } from "./modules/services/ServicePage";
+import { NewsPage } from "./modules/news/NewsPage";
+import { PostPage } from "./modules/news/PostPage";
 
 
 function App() {
@@ -22,14 +25,15 @@ function App() {
             <div className="wrapper grid">
                 <Header/>
                 <Routes>
+                    <Route path={routes.Post} element={<PostPage/>}/>
+                    <Route path={routes.News} element={<NewsPage/>}/>
                     <Route path={routes.Privacy} element={<Privacy/>}/>
                     <Route path={routes.RepairEngine} element={<RepairEngine/>}/> {/* meta done*/}
                     <Route path={routes.RepairTurbo} element={<RepairTurbo/>}/> {/* meta done*/}
-                    <Route path={routes.RepairDiesel} element={<RepairDieselInjector/>}/> {/* meta done*/}
-                    <Route path={routes.Diagnostic} element={<DieselInjectorDiagnostics/>}/> {/* meta done*/}
                     <Route path={routes.SearchedProducts} element={<SearchedProducts/>}/>
                     <Route path={routes.OrderSuccess} element={<OrderSuccess/>}/>
                     <Route path={routes.Product} element={<Product/>}/>
+                    <Route path={routes.Service} element={<ServicePage/>}/>
                     <Route path={routes.Catalog} element={<Catalog/>}/> {/* meta done*/}
                     <Route path={routes.About} element={<About/>}/> {/* meta done*/}
                     <Route path={routes.Contacts} element={<Contacts/>}/> {/* meta done*/}
