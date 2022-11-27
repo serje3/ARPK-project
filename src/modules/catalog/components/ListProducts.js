@@ -33,6 +33,7 @@ export const ListProducts = ({ list = [test_data, test_data] }) => {
                         title={item.name}
                         description={item.description}
                         coast={item.price}
+                        count={item.count}
                         available={item.available}
                         isSearchPage={false}
                     />

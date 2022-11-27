@@ -17,7 +17,7 @@ export const Product = () => {
 
     const [visible, setVisible] = useState(false)
     const [token, setToken] = useState('')
-
+    console.log(settings.yandexSmartCaptchaToken)
     return (
         <>
             {

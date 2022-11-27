@@ -30,8 +30,8 @@ export const settings = {
     routes: routes,
     contactEmail: 'napisat@arpk-m.ru',
     questionFormSelectorId: '#ask-question',
-    yandexSmartCaptchaToken: process.env.REACT_YANDEX_API_CLIENT,
-    apiUrl: process.env.REACT_API_URL || 'http://localhost:8000/api/',
+    yandexSmartCaptchaToken: process.env.REACT_APP_YANDEX_API_CLIENT,
+    apiUrl: process.env.REACT_APP_API_URL,
 }
 
 export const meta = {

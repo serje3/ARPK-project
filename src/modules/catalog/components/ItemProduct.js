@@ -21,7 +21,7 @@ export const ItemProduct = (props) => {
                     <div><img src={ellipseImg} width={props.isSearchPage?12:9} height={props.isSearchPage?12:9} alt="available icon"/>В наличии</div>
                 </div>
                 <p className="coast_info">Цена: <span>{props.coast} ₽</span></p>
-                <p className="counter_info">Количество <span>- 1 +</span></p>
+                <p className="counter_info">На складе: <span>{props.count}</span></p>
                 <button className="buy_info" onClick={()=>navigate(routeToProduct+"?order=true")}>Купить</button>
             </div>
         </div>
