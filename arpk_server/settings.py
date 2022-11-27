@@ -63,7 +63,10 @@ MIDDLEWARE = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'UNAUTHENTICATED_USER': None,
 }
 
 ROOT_URLCONF = 'arpk_server.urls'
@@ -94,16 +97,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3'
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'u1819297_test',
-        # 'USER': 'u1819297_serje3',
-        # 'PASSWORD': 'cE2gJ8nN6o',
-        # 'HOST': '31.31.198.45',
-        # 'PORT': '',
-        # 'OPTIONS': {
-        #     'sql_mode':'traditional',
-        #     'charset': 'utf8'
-        # }
     }
 }
 
@@ -161,3 +154,8 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 SMARTCAPTCHA_SERVER_KEY = config.get('captcha', 'YANDEX_SERVER_KEY')
+
+EMAIL_DEFAULT_RECIPIENT = 'serjerin322@gmail.com'
+EMAIL_QUESTION_RECIPIENT = 'serjerin322@gmail.com'
+EMAIL_PRODUCT_RECIPIENT = 'serjerin322@gmail.com'
+EMAIL_SERVICE_RECIPIENT = 'serjerin322@gmail.com'

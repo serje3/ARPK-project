@@ -27,10 +27,10 @@ class CategoryFilterMixin(BaseFilterMixin):
     filter_url_kwarg = 'category'
 
 
-class SendMailMixin:
+class TaskPostMixin:
     def post(self, request, *args, **kwargs):
         result_post = super().post(request, *args, **kwargs)
-        order_created.delay(request.data)
+        self.task_after_func.delay(request.data)
         return result_post
 
 

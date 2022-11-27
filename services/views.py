@@ -5,14 +5,17 @@ from rest_framework import generics
 
 from services.mixins import ServiceFilterMixin
 from services.models import Service, ServiceImage, ServicePrice
+from services.tasks import service_created
+from shop.mixins import TaskPostMixin
 from shop.permissions import PrivacyPermission, CaptchaPermission
 from services.serializers import ServiceOrderSerializer, ServiceSerializer, ServiceLiteSerializer, \
     ServiceImageSerializer, ServicePriceSerializer
 
 
-class ServiceOrderCreate(generics.CreateAPIView):
+class ServiceOrderCreate(TaskPostMixin, generics.CreateAPIView):
     serializer_class = ServiceOrderSerializer
     permission_classes = [PrivacyPermission, CaptchaPermission]
+    task_after_func = service_created
 
 
 class ServiceLiteList(generics.ListAPIView):

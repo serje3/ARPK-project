@@ -1,10 +1,11 @@
 from rest_framework import generics
 
-from shop.mixins import CategoryFilterMixin, SendMailMixin
+from shop.mixins import CategoryFilterMixin, TaskPostMixin
 from shop.models import Category, SubCategory, Product
 from shop.permissions import PrivacyPermission, CaptchaPermission
 from shop.serializers import CategorySerializer, SubCategorySerializer, ProductSerializer, OrderSerializer, \
     QuestionSerializer
+from shop.tasks import order_created, question_created
 
 
 class CategoryList(generics.ListAPIView):
@@ -34,11 +35,13 @@ class ProductRetrieve(generics.RetrieveAPIView):
     lookup_url_kwarg = 'id'
 
 
-class OrderCreate(SendMailMixin, generics.CreateAPIView):
+class OrderCreate(TaskPostMixin, generics.CreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [PrivacyPermission, CaptchaPermission]
+    task_after_func = order_created
 
 
-class QuestionCreate(generics.CreateAPIView):
+class QuestionCreate(TaskPostMixin, generics.CreateAPIView):
     serializer_class = QuestionSerializer
     permission_classes = [PrivacyPermission, CaptchaPermission]
+    task_after_func = question_created

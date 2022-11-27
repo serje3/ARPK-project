@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Service(models.Model):
-    """HELLo"""
 
     class Meta:
         verbose_name_plural = 'Услуги'

@@ -8,7 +8,7 @@ class PrivacyPermission(BasePermission):
     message = "Запрос не может быть выполнен, пока пользователь не согласен с политикой конфиденциальности"
 
     def has_permission(self, request, view):
-        return request.data['privacy'] == 'true'
+        return request.data['privacy'] == 'on'
 
 
 class CaptchaPermission(BasePermission):
