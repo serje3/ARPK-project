@@ -31,4 +31,8 @@ sqlparse==0.4.3
 tzdata==2022.4
 urllib3==1.26.12
 vine==5.0.0
+<<<<<<< HEAD
 wcwidth==0.2.5
+=======
+wcwidth==0.2.5
+>>>>>>> origin/develop-backend

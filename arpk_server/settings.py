@@ -28,7 +28,9 @@ SECRET_KEY = config.get('secret', 'secret_key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(config.get('general', 'debug'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    config.get('general', 'allowed_host')
+]
 
 CSRF_TRUSTED_ORIGINS = [
     config.get('general', 'allowed_origin')
