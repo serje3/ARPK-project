@@ -13,6 +13,7 @@ export const PostPage = () => {
     useEffect(() => {
         console.log('опа')
         dispatch(fetchNews(endpoints.getOnlyPostWithId(id), true))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const news = useSelector(state => state.api.news)
     const post = news.lastNews

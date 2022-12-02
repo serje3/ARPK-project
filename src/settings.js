@@ -5,6 +5,7 @@ const routesWithParameter = {
 }
 
 const routes = {
+    NotFound404: '/*',
     Privacy: '/privacy',
     RepairEngine: '/service/repair-engine',
     RepairTurbo: '/service/repair-actuator-turbo',
@@ -28,7 +29,7 @@ const routes = {
 
 export const settings = {
     routes: routes,
-    contactEmail: 'napisat@arpk-m.ru',
+    contactEmail: 'info@arpk-m.ru',
     questionFormSelectorId: '#ask-question',
     yandexSmartCaptchaToken: process.env.REACT_APP_YANDEX_API_CLIENT,
     apiUrl: process.env.REACT_APP_API_URL,

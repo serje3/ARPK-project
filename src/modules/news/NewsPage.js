@@ -10,6 +10,7 @@ export const NewsPage = () => {
     useEffect(()=>{
         console.log('готово')
         dispatch(fetchNews(''))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     if ( posts.results || posts.id || !posts || posts.length === 0) {

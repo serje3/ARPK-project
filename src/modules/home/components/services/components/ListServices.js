@@ -1,4 +1,3 @@
-import { itemsListServices } from "./itemsListServices";
 import { PageLink } from "../../../../common";
 import { settings } from "../../../../../settings";
 import { useSelector } from "react-redux";

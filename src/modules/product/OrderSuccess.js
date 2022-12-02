@@ -15,7 +15,6 @@ export function OrderSuccess() {
             <div className="head_success">Спасибо! Заказ оформлен, мы вам сообщим, как он будет готов</div>
             <button onClick={() => {
                 navigate("/")
-                navigate(0)
             }}>Вернуться на главную
             </button>
         </div>

@@ -12,6 +12,7 @@ export const Home = () => {
     useEffect(() => {
         dispatch(fetchServices())
         dispatch(fetchNews('?page_size=1'))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const _meta = meta.getHome()

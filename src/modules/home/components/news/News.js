@@ -12,9 +12,11 @@ export const News = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.api.news.lastNews)
     const previous = useCallback(() => dispatch(fetchNews(getOnlySearchParams(posts.previous))),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [posts.previous])
     const next = useCallback(() => {
         dispatch(fetchNews(getOnlySearchParams(posts.next)))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [posts.next])
     if (!posts.results || posts.results.length === 0) {
         return null

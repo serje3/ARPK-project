@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { ErrorBound } from "./components/ErrorBound";
-import { InvisibleSmartCaptcha } from "@yandex/smart-captcha";
 import { settings } from "../../../../settings";
 import { PrivacyFormInput } from "../../../privacy/PrivacyFormInput";
+import BetterInvisibleSmartCaptcha from "../../../common/captcha/BetterInvisibleSmartCaptcha";
+import { devlog } from "../../../common/utils/devlog";
 
 
 const QuestionForm = ({ children, action }) => {
@@ -20,6 +21,7 @@ const QuestionForm = ({ children, action }) => {
             }
             dispatch(action(form))
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [form, token])
 
     const formOnSubmit = (event) => {
@@ -27,15 +29,19 @@ const QuestionForm = ({ children, action }) => {
         setForm(new FormData(event.target))
         setVisible(true)
     }
+
+
     const hideShield = document.querySelectorAll('.SmartCaptcha-Shield').length >= 1
 
     return (
         <form id="ask-question" className="form-question-content grid"
               onSubmit={formOnSubmit}>
             {children}
-            <InvisibleSmartCaptcha
+            <BetterInvisibleSmartCaptcha
                 sitekey={settings.yandexSmartCaptchaToken}
-                onSuccess={setToken}
+                onSuccess={(token)=>{
+                    devlog("SetToken:",token);
+                    setToken(token)}}
                 onChallengeHidden={() => setVisible(false)}
                 visible={visible}
                 // другого выхода нет....

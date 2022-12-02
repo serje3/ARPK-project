@@ -10,6 +10,7 @@ import { rootReducer } from "./redux/rootReducer";
 import { Provider } from "react-redux";
 import { sagaWatcher } from "./api/sagas";
 import { HelmetProvider } from "react-helmet-async";
+import { hydrateRoot } from "react-dom/client";
 
 
 const saga = createSagaMiddleware()
@@ -21,16 +22,22 @@ const store = createStore(rootReducer, compose(
 
 saga.run(sagaWatcher)
 
+const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <HelmetProvider>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </HelmetProvider>
-    </React.StrictMode>
-);
+
+const AppWithOpts = () => (
+    <HelmetProvider>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </HelmetProvider>
+)
+
+if (rootElement.hasChildNodes()){
+    hydrateRoot(rootElement, <React.StrictMode><AppWithOpts/></React.StrictMode>)
+} else {
+    root.render(<React.StrictMode><AppWithOpts/></React.StrictMode>)
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

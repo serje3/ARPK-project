@@ -23,11 +23,13 @@ export const ImageSlider = ({ images, maxWidth = 320, maxHeight = 300 }) => {
     const nextImage = useCallback(
         () => {
             setActive(prevState => images[prevState + 1] ? prevState + 1 : prevState)
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
     const prevImage = useCallback(
         () => {
             setActive(prevState => images[prevState - 1] ? prevState - 1 : prevState)
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
     const current = images[active] || null

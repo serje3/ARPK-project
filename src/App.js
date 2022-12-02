@@ -8,14 +8,11 @@ import { Product } from "./modules/product/Product";
 import { OrderSuccess } from "./modules/product/OrderSuccess";
 import { SearchedProducts } from "./modules/searched-products/SearchedProducts";
 import { settings } from "./settings";
-import { DieselInjectorDiagnostics } from "./modules/services/DieselInjectorDiagnostics";
-import { RepairDieselInjector } from "./modules/services/RepairDieselInjector";
-import { RepairTurbo } from "./modules/services/RepairTurbo";
-import { RepairEngine } from "./modules/services/RepairEngine";
 import { Privacy } from "./modules/privacy/Privacy";
 import { ServicePage } from "./modules/services/ServicePage";
 import { NewsPage } from "./modules/news/NewsPage";
 import { PostPage } from "./modules/news/PostPage";
+import { NotFound404 } from "./modules/404/NotFound404";
 
 
 function App() {
@@ -28,8 +25,6 @@ function App() {
                     <Route path={routes.Post} element={<PostPage/>}/>
                     <Route path={routes.News} element={<NewsPage/>}/>
                     <Route path={routes.Privacy} element={<Privacy/>}/>
-                    <Route path={routes.RepairEngine} element={<RepairEngine/>}/> {/* meta done*/}
-                    <Route path={routes.RepairTurbo} element={<RepairTurbo/>}/> {/* meta done*/}
                     <Route path={routes.SearchedProducts} element={<SearchedProducts/>}/>
                     <Route path={routes.OrderSuccess} element={<OrderSuccess/>}/>
                     <Route path={routes.Product} element={<Product/>}/>
@@ -38,6 +33,7 @@ function App() {
                     <Route path={routes.About} element={<About/>}/> {/* meta done*/}
                     <Route path={routes.Contacts} element={<Contacts/>}/> {/* meta done*/}
                     <Route path={routes.Home} element={<Home/>}/> {/* meta done*/}
+                    <Route path={routes.NotFound404} element={<NotFound404/>}/>
                 </Routes>
                 <Footer/>
             </div>

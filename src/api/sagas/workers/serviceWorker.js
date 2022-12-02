@@ -1,5 +1,5 @@
 import { call, put } from "redux-saga/effects";
-import { FETCH_ONE_SERVICE, FETCH_PRODUCTS, FETCH_SERVICES } from "../../../redux/types";
+import { FETCH_ONE_SERVICE, FETCH_SERVICES } from "../../../redux/types";
 import axios from "axios";
 import { endpoints } from "../../endpoints";
 

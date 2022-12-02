@@ -67,6 +67,7 @@ export const BuyModalForm = ({ modalIsOpen, setIsOpen, product, token, setVisibl
                 setVisible(false)
                 setToken("")
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch, form, token])
 
     useEffect(() => {

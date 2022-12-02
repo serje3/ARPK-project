@@ -229,6 +229,7 @@ button[disabled] {
     width: inherit;
     cursor: pointer;
     -webkit-user-drag: none;
+    user-select: none;
   }
   .previous, .next{
     position: absolute;

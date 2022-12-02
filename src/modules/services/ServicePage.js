@@ -1,6 +1,5 @@
 import { Service } from "./Service";
 import { meta, serviceTable, settings } from "../../settings";
-import { ServiceCoast } from "./components/ServiceCoast";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOneService } from "../../redux/actions";
@@ -19,6 +18,7 @@ export const ServicePage = () => {
 
     useEffect(() => {
         dispatch(fetchOneService(id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

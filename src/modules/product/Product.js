@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import { Breadcrumb } from "../common";
 import { useProductBreadcrumb } from "./components/hooks/useProductBreadcrumb";
 import { BuyModalForm } from "./components/BuyModal";
-import { InvisibleSmartCaptcha } from "@yandex/smart-captcha";
 import { settings } from "../../settings";
 import { ProductInfo } from "./components/ProductInfo";
 import { useProductData } from "./components/hooks/useProductData";
 import { Helmet } from "react-helmet-async";
+import BetterInvisibleSmartCaptcha from "../common/captcha/BetterInvisibleSmartCaptcha";
 
 
 export const Product = () => {
@@ -17,7 +17,7 @@ export const Product = () => {
 
     const [visible, setVisible] = useState(false)
     const [token, setToken] = useState('')
-    console.log(settings.yandexSmartCaptchaToken)
+
     return (
         <>
             {
@@ -50,7 +50,7 @@ export const Product = () => {
                             />
                         </>
                 }
-                <InvisibleSmartCaptcha
+                <BetterInvisibleSmartCaptcha
                     sitekey={settings.yandexSmartCaptchaToken}
                     onSuccess={setToken}
                     onChallengeHidden={() => setVisible(false)}

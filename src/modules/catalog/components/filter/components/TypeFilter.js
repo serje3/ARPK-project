@@ -20,19 +20,19 @@ const formOnChange = (event, setFilterArgs, filterArgs) => {
 }
 
 
-function setValuesToInputs(filterArgs, ref) {
-    if (ref.current && filterArgs.length !== 0){
-        const arrayInputs = Array.from(ref.current).filter((value) => value.nodeName === 'INPUT')
-        console.log(filterArgs)
-        arrayInputs.forEach(value => {
-            const id = parseInt(value.id[0])
-            const filterArg = filterArgs.find(value => value[0] === id)
-            console.log(filterArg, id)
-            if (filterArg)
-                value.checked = filterArg[1]
-        })
-    }
-}
+// function setValuesToInputs(filterArgs, ref) {
+//     if (ref.current && filterArgs.length !== 0){
+//         const arrayInputs = Array.from(ref.current).filter((value) => value.nodeName === 'INPUT')
+//         console.log(filterArgs)
+//         arrayInputs.forEach(value => {
+//             const id = parseInt(value.id[0])
+//             const filterArg = filterArgs.find(value => value[0] === id)
+//             console.log(filterArg, id)
+//             if (filterArg)
+//                 value.checked = filterArg[1]
+//         })
+//     }
+// }
 
 export const TypeFilter = () => {
     const formRef = useRef(null)
